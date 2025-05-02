@@ -3,6 +3,7 @@ const app = express();
 const mongoose = require("mongoose");
 const path = require("path");
 const methodOverride = require("method-override");
+const Listing = require("./model/listing");
 
 app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
@@ -22,11 +23,23 @@ main().then((res) => {
   console.log(err);
 });
 
-app.get("/", (req, res) => {
-  res.send("success");
-})
 
+app.get("/", async (req, res) => {
+  await res.send("success");
+});
 
+app.get("/listings", async (req, res) => {
+  try {
+    const allListings = await Listing.find({});
+    res.render("listings/index.ejs", { allListings });
+
+  } catch (error) {
+    console.error("Error fetching listings:", err);
+    res.status(500).send("Internal Server Error");
+
+  }
+
+});
 
 app.listen(port, () => {
   console.log(`server is listening on port : ${port}`);
