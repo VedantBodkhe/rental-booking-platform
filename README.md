@@ -1,5 +1,7 @@
-Here's a clean, attractive, and beginner-friendly `README.md` file tailored for your Express-MongoDB project ("Wanderlust" app):
 
+---
+
+```markdown
 ---
 
 # 🌍 Wanderlust
@@ -30,6 +32,7 @@ A simple travel listing web app built using **Node.js**, **Express**, **MongoDB*
 ## 📁 Project Structure
 
 ```
+
 wanderlust/
 │
 ├── model/
@@ -43,7 +46,8 @@ wanderlust/
 │
 ├── app.js                 # Main server file
 ├── package.json
-```
+
+````
 
 ---
 
@@ -54,7 +58,7 @@ wanderlust/
 ```bash
 git clone https://github.com/your-username/wanderlust.git
 cd wanderlust
-```
+````
 
 ### 2. Install Dependencies
 
@@ -111,3 +115,9 @@ http://localhost:2210
 
 This project is for educational/demo purposes. Feel free to use it and build upon it!
 
+---
+
+> ❤️ Made with love by Vedant
+
+```
+```
