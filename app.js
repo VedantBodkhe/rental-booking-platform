@@ -31,7 +31,7 @@ app.get("/", async (req, res) => {
 app.get("/listings", async (req, res) => {
   try {
     const allListings = await Listing.find({});
-    res.render("listings/index.ejs", { allListings });
+    res.render("listing/index.ejs", { allListings });
 
   } catch (error) {
     console.error("Error fetching listings:", err);
