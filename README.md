@@ -2,85 +2,97 @@
 ---
 
 ```markdown
+<h1 align="center">🌍 Wanderlust</h1>
+
+<p align="center">
+  ✈️ A beautiful travel listing web application built using <strong>Node.js</strong>, <strong>Express.js</strong>, <strong>MongoDB</strong>, and <strong>EJS</strong>.
+  <br />
+  <em>A place to explore, list, and discover dream destinations.</em>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Node.js-Express-green?style=flat-square&logo=node.js" />
+  <img src="https://img.shields.io/badge/MongoDB-Mongoose-brightgreen?style=flat-square&logo=mongodb" />
+  <img src="https://img.shields.io/badge/View%20Engine-EJS-yellow?style=flat-square" />
+  <img src="https://img.shields.io/badge/Made%20With-Love-red?style=flat-square" />
+</p>
+
 ---
 
-# 🌍 Wanderlust
+## ✨ Features
 
-A simple travel listing web app built using **Node.js**, **Express**, **MongoDB**, and **EJS** templating engine. This project demonstrates how to set up a basic CRUD app using MVC architecture and MongoDB for backend storage.
-
----
-
-## 🚀 Features
-
-* View all travel listings
-* Organized project structure using MVC pattern
-* EJS template rendering
-* MongoDB integration using Mongoose
-* RESTful routes with `method-override` for PUT/DELETE support
+- 🗺️ Browse all travel destination listings
+- 📦 MongoDB integration with Mongoose
+- 🧱 MVC architecture for clean code structure
+- 🖼️ EJS templating for dynamic views
+- 🔄 RESTful routing using `method-override`
+- 🎨 Static asset handling (CSS, images)
 
 ---
 
 ## 🧱 Tech Stack
 
-* **Backend:** Node.js, Express.js
-* **Database:** MongoDB (via Mongoose)
-* **Templating Engine:** EJS
-* **Others:** method-override, dotenv, path
+| Layer      | Technology         |
+|------------|--------------------|
+| Backend    | Node.js, Express.js |
+| Database   | MongoDB (via Mongoose) |
+| Templating | EJS |
+| Utilities  | method-override, dotenv, path |
 
 ---
 
-## 📁 Project Structure
+## 📁 Folder Structure
 
 ```
 
 wanderlust/
 │
 ├── model/
-│   └── listing.js         # Mongoose schema for listings
+│   └── listing.js         # Mongoose schema
 │
 ├── views/
 │   └── listing/
-│       └── index.ejs      # View for displaying listings
+│       └── index.ejs      # EJS template
 │
-├── public/                # Static files (CSS, images)
+├── public/                # Static assets
 │
-├── app.js                 # Main server file
+├── app.js                 # Main application file
 ├── package.json
 
 ````
 
 ---
 
-## ⚙️ Setup Instructions
+## ⚙️ Getting Started
 
-### 1. Clone the Repository
+### 🔧 Prerequisites
+
+- ✅ Node.js installed
+- ✅ MongoDB installed & running locally
+
+### 🛠️ Installation
 
 ```bash
 git clone https://github.com/your-username/wanderlust.git
 cd wanderlust
+npm install
 ````
 
-### 2. Install Dependencies
+### 🚀 Run MongoDB
 
-```bash
-npm install
-```
-
-### 3. Start MongoDB
-
-Make sure MongoDB is running locally on your machine.
+Make sure MongoDB is running:
 
 ```bash
 mongod
 ```
 
-### 4. Run the App
+### ▶️ Start the App
 
 ```bash
 node app.js
 ```
 
-App will be running at:
+Visit:
 
 ```
 http://localhost:2210
@@ -88,36 +100,37 @@ http://localhost:2210
 
 ---
 
-## 🧪 Available Routes
+## 🔗 Routes Overview
 
-| Route       | Method | Description            |
-| ----------- | ------ | ---------------------- |
-| `/`         | GET    | Home page (test route) |
-| `/listings` | GET    | Display all listings   |
-
----
-
-## ❗ Troubleshooting
-
-* Make sure MongoDB is installed and running.
-* Ensure your MongoDB URL in `app.js` is correct.
-* Check that the `views/` and `public/` directories exist.
+| Route       | Method | Description              |
+| ----------- | ------ | ------------------------ |
+| `/`         | GET    | Home test route          |
+| `/listings` | GET    | View all travel listings |
 
 ---
 
-## 📸 Sample Screenshot (Optional)
+## 🧪 Screenshots
 
-*You can include a screenshot here of your listing page.*
-
----
-
-## 📃 License
-
-This project is for educational/demo purposes. Feel free to use it and build upon it!
+> *You can add screenshots of the UI here for visual reference.*
 
 ---
 
-> ❤️ Made with love by Vedant
+## 🧰 Troubleshooting
 
-```
+* 💡 Ensure MongoDB is installed and running
+* 💡 Check the MongoDB URL in `app.js`
+* 💡 Make sure the `views/` and `public/` folders exist
+
+---
+
+## 📜 License
+
+This project is open-source and available for learning and educational use.
+Feel free to modify and build upon it!
+
+---
+
+<p align="center">
+  ❤️ Made with love by <strong>Vedant</strong>
+</p>
 ```
