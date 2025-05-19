@@ -28,6 +28,8 @@ app.get("/", async (req, res) => {
   await res.send("success");
 });
 
+
+// index route
 app.get("/listings", async (req, res) => {
   try {
     const allListings = await Listing.find({});
@@ -40,6 +42,21 @@ app.get("/listings", async (req, res) => {
   }
 
 });
+
+// show rout
+app.get("/listings/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    const listing = await Listing.findById(id);
+    res.render("./views/listing/show.ejs", { listing });
+
+  } catch (error) {
+    console.error("Error fetching listings:", err);
+    res.status(500).send("Internal Server Error");
+
+  }
+
+})
 
 app.listen(port, () => {
   console.log(`server is listening on port : ${port}`);
