@@ -79,6 +79,39 @@ app.get("/listing/:id", async (req, res) => {
   console.log("Fetched listing:", listing);
 });
 
+// Edit route - display listing for edit by using id
+app.get("/listings/:id/edit", async (req, res) => {
+  let { id } = req.params;
+  const listing = await Listing.findById(id);
+  res.render("listing/edit.ejs", { listing });
+})
+
+// Update route – update listing by ID and redirect to listings page
+app.put("/listings/:id", async (req, res) => {
+  let { id } = req.params;
+  await Listing.findByIdAndUpdate(id, {...req.body.listing});
+  res.redirect("/listings");
+});
+
+
+//delete route
+app.delete("/listings/:id", async (req, res) => {
+  let {id} = req.params;
+  const listing = await Listing.findByIdAndDelete(id);
+  console.log(listing);
+  res.redirect("/listings")
+
+
+
+
+});
+// app.put("/listings/:id", async (req, res) => {
+//   let { id } = req.params;
+//   await Listing.findByIdAndUpdate(id, { ...req.body.listing });
+//   res.redirect("/listings");
+// });
+
+
 // Start the server and listen on the specified port
 app.listen(port, () => {
   console.log(`Server is listening on port: ${port}`);
